@@ -1,103 +1,83 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-[#0c0a09] text-neutral-100 font-serif">
+      {/* Logo/Header */}
+      <header className="p-6 text-center">
+        <img src="/drift-logo.png" alt="Drift AI Logo" className="mx-auto w-32" />
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Hero Section */}
+      <section className="text-center py-16 px-6">
+        <h1 className="text-4xl sm:text-6xl font-bold leading-tight mb-6">Close more. Do less.</h1>
+        <p className="text-lg sm:text-xl max-w-2xl mx-auto text-neutral-300 mb-8">
+          AI agents that generate and qualify real leads, send personalized emails,
+          and schedule meetings. Just tell it who you want to talk to.
+        </p>
+        <Link href="/campaign">
+          <button className="px-6 py-3 bg-white text-black rounded-full hover:bg-neutral-200 transition">
+            Get started
+          </button>
+        </Link>
+      </section>
+
+      {/* Quote Section */}
+      <section className="py-12 px-6 bg-[#1c1917]">
+        <blockquote className="max-w-2xl mx-auto italic text-center text-xl text-neutral-400">
+          "The future of sales isn’t automation. It’s delegation."
+        </blockquote>
+      </section>
+
+      {/* How it Works Section */}
+      <section className="py-20 px-6">
+        <h2 className="text-3xl font-semibold text-center mb-6">How it works</h2>
+        <p className="text-center text-neutral-300 mb-12 max-w-xl mx-auto">
+          Insert your target. Your AI agent builds a contact list, crafts a personalized sequence,
+          and starts messaging. Autonomously.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="bg-[#1c1917] p-6 rounded-xl">
+            <h3 className="font-semibold text-white mb-2">01. Who you're targeting</h3>
+            <p className="text-neutral-400 text-sm">
+              Role, sector, company size, country — the agent builds the perfect query.
+            </p>
+          </div>
+          <div className="bg-[#1c1917] p-6 rounded-xl">
+            <h3 className="font-semibold text-white mb-2">02. Finds and analyzes</h3>
+            <p className="text-neutral-400 text-sm">
+              It scrapes the web, filters leads, verifies emails, and collects real data.
+            </p>
+          </div>
+          <div className="bg-[#1c1917] p-6 rounded-xl">
+            <h3 className="font-semibold text-white mb-2">03. Writes and sends</h3>
+            <p className="text-neutral-400 text-sm">
+              Generates 3 tailored emails, adapts the tone, and handles the outreach. You monitor.
+              It works.
+            </p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Editorial Block */}
+      <section className="py-24 px-6 bg-[#0c0a09]">
+        <div className="max-w-4xl mx-auto space-y-6 text-zinc-300 text-left leading-relaxed">
+          <h2 className="text-2xl font-semibold uppercase tracking-wide">Editorial</h2>
+          <p>
+            Drift AI is a quiet operator. It finds and qualifies leads, verifies emails,
+            writes your message, and reaches out—without you lifting a finger.
+          </p>
+          <p>
+            Built for precision and rhythm, Drift adapts to your tone and timing. It works
+            behind the scenes to surface real conversations with people that matter.
+          </p>
+          <p>
+            Atmospheric, sharp, and obsessively focused on output—Drift is for founders and
+            sales teams who move fast and don’t miss.
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
+
