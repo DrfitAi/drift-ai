@@ -56,7 +56,7 @@ export default function CampaignWizard() {
         {step === 3 && (
           <section className="space-y-8">
             <h2 className="text-2xl font-semibold text-white">Pick your outreach flow</h2>
-            <p className="text-zinc-400">Each flow is designed for high conversion, based on proven psychology & sales research.</p>
+            <p className="text-zinc-400">Each flow is designed for high conversion, based on proven psychology &amp; sales research.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
                 {
@@ -104,7 +104,6 @@ export default function CampaignWizard() {
         {step === 4 && (
           <section className="space-y-10 animate-fade-in">
             <h2 className="text-2xl font-semibold text-white">Your Agent is Ready</h2>
-
             <div className="space-y-6">
               <div className="bg-zinc-900 p-5 rounded-xl shadow-inner">
                 <p className="text-sm text-zinc-500 mb-1">Industry</p>
@@ -123,9 +122,9 @@ export default function CampaignWizard() {
             <div className="mt-10 bg-gradient-to-br from-zinc-800 to-zinc-900 p-6 rounded-xl border border-zinc-700">
               <h3 className="text-xl font-semibold text-white mb-2">Preview (simulated)</h3>
               <div className="text-zinc-300 space-y-4 text-sm leading-relaxed">
-                <p>💬 <span className="italic">"Hey {formData.targetRole}, I came across your work at a {formData.companyType}..."</span></p>
-                <p>📬 <span className="italic">"Here's something we've seen work well for others in {formData.industry}..."</span></p>
-                <p>📅 <span className="italic">"Would it be insane to book a 10-min slot this week?"</span></p>
+                <p>💬 <span className="italic">&quot;Hey {formData.targetRole}, I came across your work at a {formData.companyType}...&quot;</span></p>
+                <p>📬 <span className="italic">&quot;Here&apos;s something we&apos;ve seen work well for others in {formData.industry}...&quot;</span></p>
+                <p>📅 <span className="italic">&quot;Would it be insane to book a 10-min slot this week?&quot;</span></p>
               </div>
             </div>
 
