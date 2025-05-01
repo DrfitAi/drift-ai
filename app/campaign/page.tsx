@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { signIn } from 'next-auth/react';
 import Link from 'next/link';
 
 export default function CampaignWizard() {
@@ -58,7 +57,7 @@ export default function CampaignWizard() {
         {step === 3 && (
           <section className="space-y-8">
             <h2 className="text-2xl font-semibold text-white">Pick your outreach flow</h2>
-            <p className="text-zinc-400">Each flow is designed for high conversion, based on proven psychology & sales research.</p>
+            <p className="text-zinc-400">Each flow is designed for high conversion, based on proven psychology &amp; sales research.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
                 {
@@ -125,7 +124,7 @@ export default function CampaignWizard() {
               <h3 className="text-xl font-semibold text-white mb-2">Preview (simulated)</h3>
               <div className="text-zinc-300 space-y-4 text-sm leading-relaxed">
                 <p>💬 <span className="italic">Hey {formData.targetRole}, I came across your work at a {formData.companyType}...</span></p>
-                <p>📬 <span className="italic">Here's something we've seen work well in {formData.industry}...</span></p>
+                <p>📬 <span className="italic">Here&apos;s something we&apos;ve seen work well in {formData.industry}...</span></p>
                 <p>📅 <span className="italic">Would it be insane to book a 10-min slot this week?</span></p>
               </div>
             </div>
